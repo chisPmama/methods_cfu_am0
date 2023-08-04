@@ -6,23 +6,25 @@
 # The downcase method is called on the string object "Hello World"
 # No arguments are passed; downcase has one clear job which is to lowercase all letters that exist in the String
 # The return value is "hello world"
-"Hello World".downcase
+puts "Hello World".downcase
+# returning object string as lowercase
 
 
-"Hello World".include?("Hello")
+puts "Hello World".include?("Hello")
+# returning boolean of true because it is checking if string includes word "Hello"
 
 
-"Hello World".end_with?("Hello")
+puts "Hello World".end_with?("Hello")
+# returning boolean of false because it is checking if string ends with word "Hello"
 
+puts "Hello World".end_with?("rld")
+# returning boolean of true because the string does contain the letters "rld"
 
-"Hello World".end_with?("rld")
+puts 12.even?
+# returning boolean of true because it is checking the integer object of 12 if it is even
 
-
-12.even?
-
-
-18.next
-
+puts 18.next
+# returning integer of 19, next would look for the next integer to follow
 
 
 # SECTION 2: Calling methods on variables assigned to strings.
@@ -39,6 +41,13 @@
 first_name = "Jeff"
 puts first_name.start_with?("J")
 
+camp_name = "Camp Hope"
+camp_location = "anywhere the pod is"
+
+puts camp_name.swapcase
+# .swapcase changes the capitalization style of each letter
+puts camp_location.split
+# .split locates the spaces between each word and creates an array of substrings
 
 
 # SECTION 3: Calling methods on variables assigned to integers.
@@ -47,6 +56,13 @@ puts first_name.start_with?("J")
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
 
+chisP_age = 5
+my_age = 29
+
+p chisP_age.to_f
+# Turned chisP_age of 5 into a float value with decimals
+p my_age.to_r
+# Returned age as a rational
 
 
 # SECTION 4: Calling methods on variables assigned to arrays.
@@ -54,3 +70,11 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+
+camp_hope = ["Anthea","Pablo","Soleil","Sage","Griffin"]
+cooks = ["Anthea","Soleil"]
+
+p camp_hope.include?("Dude")
+# .include? verifies if argument is included in the array, returns a boolean of false
+p cooks.shuffle!
+# .shuffle! shuffles the array in random order
